@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Cubagem de Madeira</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cálculo de Cubagem de Madeira</h1>
+    <div class="container">
+        <div class="section">
+            <h2>Dimensões Individuais</h2>
+            <label for="comprimento">Comprimento (m):</label>
+            <input type="number" id="comprimento" placeholder="Digite o comprimento" step="0.01">
+            
+            <label for="largura">Largura (m):</label>
+            <input type="number" id="largura" placeholder="Digite a largura" step="0.01">
+            
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" placeholder="Digite a altura" step="0.01">
+            
+            <label for="quantidade">Quantidade de Peças:</label>
+            <input type="number" id="quantidade" placeholder="Digite a quantidade de peças" min="1" step="1">
+            
+            <button onclick="calcularCubagem()">Calcular Volume Total</button>
+
+            <h2>Volume por Peça: <span id="volumeIndividual">0 m³</span></h2>
+            <h2>Volume Total: <span id="volumeTotal">0 m³</span></h2>
+        </div>
+
+        <div class="section">
+            <h2>Calcular Cubagem de um Palete</h2>
+            <label for="quantidadeRipas1">Quantidade de Ripas 1:</label>
+            <input type="number" id="quantidadeRipas1" placeholder="Digite a quantidade de ripas 1" min="1" step="1">
+            
+            <label for="comprimentoRipa1">Comprimento Ripa 1 (m):</label>
+            <input type="number" id="comprimentoRipa1" placeholder="Digite o comprimento da ripa 1" step="0.01">
+
+            <label for="larguraRipa1">Largura Ripa 1 (m):</label>
+            <input type="number" id="larguraRipa1" placeholder="Digite a largura da ripa 1" step="0.01">
+
+            <label for="alturaRipa1">Altura Ripa 1 (m):</label>
+            <input type="number" id="alturaRipa1" placeholder="Digite a altura da ripa 1" step="0.01">
+
+            <label for="quantidadeRipas2">Quantidade de Ripas 2:</label>
+            <input type="number" id="quantidadeRipas2" placeholder="Digite a quantidade de ripas 2" min="1" step="1">
+
+            <label for="comprimentoRipa2">Comprimento Ripa 2 (m):</label>
+            <input type="number" id="comprimentoRipa2" placeholder="Digite o comprimento da ripa 2" step="0.01">
+
+            <label for="larguraRipa2">Largura Ripa 2 (m):</label>
+            <input type="number" id="larguraRipa2" placeholder="Digite a largura da ripa 2" step="0.01">
+
+            <label for="alturaRipa2">Altura Ripa 2 (m):</label>
+            <input type="number" id="alturaRipa2" placeholder="Digite a altura da ripa 2" step="0.01">
+            
+            <label for="quantidadeBarrotes">Quantidade de Barrotes:</label>
+            <input type="number" id="quantidadeBarrotes" placeholder="Digite a quantidade de barrotes" min="1" step="1">
+            
+            <label for="comprimentoBarrote">Comprimento Barrote (m):</label>
+            <input type="number" id="comprimentoBarrote" placeholder="Digite o comprimento do barrote" step="0.01">
+            
+            <label for="larguraBarrote">Largura Barrote (m):</label>
+            <input type="number" id="larguraBarrote" placeholder="Digite a largura do barrote" step="0.01">
+            
+            <label for="alturaBarrote">Altura Barrote (m):</label>
+            <input type="number" id="alturaBarrote" placeholder="Digite a altura do barrote" step="0.01">
+
+            <!-- Campo de quantidade de paletes -->
+            <label for="quantidadePaletes">Quantidade de Paletes:</label>
+            <input type="number" id="quantidadePaletes" placeholder="Digite a quantidade de paletes" min="1" step="1">
+            
+            <button onclick="calcularCubagemPalete()">Calcular Cubagem do Palete</button>
+
+            <h2>Volume Total do Palete: <span id="volumePalete">0 m³</span></h2>
+            <h2>Volume Total de Vários Paletes: <span id="volumeVariosPaletes">0 m³</span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
